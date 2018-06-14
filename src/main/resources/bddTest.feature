@@ -2,7 +2,7 @@
 Feature: FillForm
 
  @tag1
-  Scenario: Login
+  Scenario: Fill form details
 
 Given A user is on the landing page
 When user enters login details
