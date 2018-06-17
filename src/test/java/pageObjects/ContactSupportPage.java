@@ -87,9 +87,7 @@ public class ContactSupportPage extends DriverManager {
 
     }
     public void confirmEnquiryText(String value){
-     //driver.getPageSource().contains(value);
-
-         String Main_title = driver.getTitle();
+     String Main_title = driver.getTitle();
         String Expected_title = value;
         Assert.assertEquals(Main_title,Expected_title );
 
