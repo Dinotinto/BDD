@@ -1,66 +1,100 @@
 package steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import pageObjects.ContactSupport;
+import pageObjects.ContactSupportPage;
 import pageObjects.LoginPage;
 import utility.DriverManager;
 
 public class StepDefinition {
-    LoginPage log = new LoginPage();
-    DriverManager setDriver = new DriverManager();
-    ContactSupport get = new ContactSupport();
+   private LoginPage loginPage = new LoginPage();
+    private DriverManager driverManager = new DriverManager();
+    private ContactSupportPage contactSupport = new ContactSupportPage();
 
 
     @Before
     public void start_setup(){
-        setDriver.startSession("firefox");
+        driverManager.startSession("firefox");
     }
 
     @Given("^A user is on the landing page$")
-    public void a_user_is_on_the_landing_page() throws Throwable {
-    log.goToUrl();
+    public void aUserIsOnTheLandingPage() throws Throwable {
+       loginPage= new LoginPage();
+       loginPage.goToUrl();
     }
 
-    @When("^user enters login details$")
-    public void user_enters_login_details() throws Throwable {
-    log.sign_In();
+    @When("^user enters username as \"([^\"]*)\"$")
+    public void user_enters_username_as(String val) throws Throwable {
+       loginPage.enterUsername(val);
     }
+
+    @When("^enters password as \"([^\"]*)\"$")
+    public void enters_password_as(String val1) throws Throwable {
+       loginPage.enterPassword(val1);
+    }
+
 
     @When("^clicks login button$")
     public void clicks_login_button() throws Throwable {
-    log.clickSign_In();
+        loginPage.clickSignIn();
     }
-
-
 
     @When("^user clicks Contact support tab$")
     public void user_clicks_Contact_support_tab() throws Throwable {
-    get.clickTab();
+        contactSupport = new ContactSupportPage();
+        contactSupport.clickTab();
     }
 
+    @When("^user enters \"([^\"]*)\" in name text field$")
+    public void user_enters_in_name_text_field(String name) throws Throwable {
+       contactSupport.fillInName(name);
+    }
+    @When("^user enters \"([^\"]*)\" in the Middlename text field$")
+    public void user_enters_in_the_Middlename_text_field(String Middlename) throws Throwable {
+        contactSupport.fillInMiddlename(Middlename);
+    }
 
-    @When("^user enters parameters$")
-    public void user_enters_parameters() throws Throwable {
-    get.fillInDetails();
+    @When("^user enters \"([^\"]*)\" in the Surname text field$")
+    public void user_enters_in_the_Surname_text_field(String Surname) throws Throwable {
+        contactSupport.fillInSurname(Surname);
+    }
+
+    @When("^user enters \"([^\"]*)\" in the Address text field$")
+    public void user_enters_in_the_Address_text_field(String Address) throws Throwable {
+       contactSupport.fillInAddress(Address);
+    }
+
+    @When("^user enters \"([^\"]*)\" in the Postcode text field$")
+    public void user_enters_in_the_Postcode_text_field(String Postcode) throws Throwable {
+       contactSupport.fillInPostcode(Postcode);
+    }
+
+    @When("^user enters \"([^\"]*)\" in the Email text field$")
+    public void user_enters_in_the_Email_text_field(String Email) throws Throwable {
+       contactSupport.fillInEmail(Email);
+    }
+
+    @When("^user enters \"([^\"]*)\" in the Message text box$")
+    public void user_enters_in_the_Message_text_box(String Message) throws Throwable {
+       contactSupport.fillInMessage(Message);
     }
 
     @When("^clicks submit button$")
     public void clicks_submit_button() throws Throwable {
-    get.submitDetails();
+       contactSupport.submitDetails();
     }
 
-    @Then("^display confirmation message$")
-    public void display_confirmation_message() throws Throwable {
-    get.confirmEnquiry();
+    @Then("^display confirmation message as \"([^\"]*)\"$")
+    public void display_confirmation_message_as(String value) throws Throwable {
+       contactSupport.confirmEnquiryText(value);
     }
+
     @After
     public void close_setup(){
-    setDriver.tearDown();
+    driverManager.tearDown();
     }
 
 }
