@@ -87,8 +87,8 @@ public class StepDefinition {
        contactSupport.submitDetails();
     }
 
-    @Then("^display confirmation message as \"([^\"]*)\"$")
-    public void display_confirmation_message_as(String value) throws Throwable {
+    @Then("^take me to the confirmation page with title  \"([^\"]*)\"$")
+    public void take_me_to_the_confirmation_page_with_title(String value) throws Throwable {
        contactSupport.confirmEnquiryText(value);
     }
 

@@ -18,4 +18,4 @@ Feature: As user,
   And  user enters "Ade@yahoo.com" in the Email text field
   And  user enters "Ade is alright" in the Message text box
   And  clicks submit button
-  Then  display confirmation message as "Thank you fo your Message! We will get in touch as soon as possible."
+  Then  take me to the confirmation page with title  "WEG Group"
