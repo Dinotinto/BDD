@@ -1,0 +1,284 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 31872579333,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinition.start_setup()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Fill form details",
+        "description": "",
+        "id": "as-user,;fill-form-details",
+        "after": [
+          {
+            "result": {
+              "duration": 932981335,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinition.close_setup()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6273865330,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "A user is on the landing page",
+            "match": {
+              "location": "StepDefinition.aUserIsOnTheLandingPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2203605694,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user enters username as \"dino\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "dino",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinition.user_enters_username_as(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1384667945,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "enters password as \"gy7pgI673\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "gy7pgI673",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefinition.enters_password_as(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1003506110,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "clicks login button",
+            "match": {
+              "location": "StepDefinition.clicks_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5196233605,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user clicks Contact support tab",
+            "match": {
+              "location": "StepDefinition.user_clicks_Contact_support_tab()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3646602684,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enters \"Ade\" in name text field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ade",
+                  "offset": 13
+                }
+              ],
+              "location": "StepDefinition.user_enters_in_name_text_field(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 573401720,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user enters \"Olu\" in the Middlename text field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Olu",
+                  "offset": 13
+                }
+              ],
+              "location": "StepDefinition.user_enters_in_the_Middlename_text_field(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 381529650,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user enters \"Ido\" in the Surname text field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ido",
+                  "offset": 13
+                }
+              ],
+              "location": "StepDefinition.user_enters_in_the_Surname_text_field(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 609866890,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user enters \"2 manor close\" in the Address text field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2 manor close",
+                  "offset": 13
+                }
+              ],
+              "location": "StepDefinition.user_enters_in_the_Address_text_field(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 254402500,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user enters \"SE28\" in the Postcode text field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SE28",
+                  "offset": 13
+                }
+              ],
+              "location": "StepDefinition.user_enters_in_the_Postcode_text_field(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 449015300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user enters \"Ade@yahoo.com\" in the Email text field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ade@yahoo.com",
+                  "offset": 13
+                }
+              ],
+              "location": "StepDefinition.user_enters_in_the_Email_text_field(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 463705225,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user enters \"Ade is alright\" in the Message text box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ade is alright",
+                  "offset": 13
+                }
+              ],
+              "location": "StepDefinition.user_enters_in_the_Message_text_box(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 723627715,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "clicks submit button",
+            "match": {
+              "location": "StepDefinition.clicks_submit_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 112174245,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "take me to the confirmation page with title  \"WEG Group\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "WEG Group",
+                  "offset": 46
+                }
+              ],
+              "location": "StepDefinition.take_me_to_the_confirmation_page_with_title(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@TestCompleted"
+          }
+        ]
+      }
+    ],
+    "name": "As user,",
+    "description": "I want to be able\nto filling the contact form",
+    "id": "as-user,",
+    "keyword": "Feature",
+    "uri": "verifyTest.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@cii"
+      }
+    ]
+  }
+]
