@@ -1,4 +1,4 @@
-@ci
+@cii
 Feature: As user,
  I want to be able
  to filling the contact form
