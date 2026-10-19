@@ -1,0 +1,11 @@
+# Build output and reports
+target/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Local credentials — never commit
+.env
+*.env

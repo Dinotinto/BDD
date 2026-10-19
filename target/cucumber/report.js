@@ -37,12 +37,12 @@ formatter.step({
 });
 formatter.step({
   "line": 9,
-  "name": "user enters username as \"dino\"",
+  "name": "user enters username as \"test-user\"",
   "keyword": "When "
 });
 formatter.step({
   "line": 10,
-  "name": "enters password as \"gy7pgI673\"",
+  "name": "enters password as \"<redacted>\"",
   "keyword": "And "
 });
 formatter.step({
@@ -57,37 +57,37 @@ formatter.step({
 });
 formatter.step({
   "line": 13,
-  "name": "user enters \"Ade\" in name text field",
+  "name": "user enters \"Test\" in name text field",
   "keyword": "And "
 });
 formatter.step({
   "line": 14,
-  "name": "user enters \"Olu\" in the Middlename text field",
+  "name": "user enters \"Middle\" in the Middlename text field",
   "keyword": "And "
 });
 formatter.step({
   "line": 15,
-  "name": "user enters \"Ido\" in the Surname text field",
+  "name": "user enters \"User\" in the Surname text field",
   "keyword": "And "
 });
 formatter.step({
   "line": 16,
-  "name": "user enters \"2 manor close\" in the Address text field",
+  "name": "user enters \"1 Test Street\" in the Address text field",
   "keyword": "And "
 });
 formatter.step({
   "line": 17,
-  "name": "user enters \"SE28\" in the Postcode text field",
+  "name": "user enters \"AB1 2CD\" in the Postcode text field",
   "keyword": "And "
 });
 formatter.step({
   "line": 18,
-  "name": "user enters \"Ade@yahoo.com\" in the Email text field",
+  "name": "user enters \"test.user@example.com\" in the Email text field",
   "keyword": "And "
 });
 formatter.step({
   "line": 19,
-  "name": "user enters \"Ade is alright\" in the Message text box",
+  "name": "user enters \"Test message\" in the Message text box",
   "keyword": "And "
 });
 formatter.step({
@@ -110,7 +110,7 @@ formatter.result({
 formatter.match({
   "arguments": [
     {
-      "val": "dino",
+      "val": "test-user",
       "offset": 25
     }
   ],
@@ -123,7 +123,7 @@ formatter.result({
 formatter.match({
   "arguments": [
     {
-      "val": "gy7pgI673",
+      "val": "<redacted>",
       "offset": 20
     }
   ],
@@ -150,7 +150,7 @@ formatter.result({
 formatter.match({
   "arguments": [
     {
-      "val": "Ade",
+      "val": "Test",
       "offset": 13
     }
   ],
@@ -163,7 +163,7 @@ formatter.result({
 formatter.match({
   "arguments": [
     {
-      "val": "Olu",
+      "val": "Middle",
       "offset": 13
     }
   ],
@@ -176,7 +176,7 @@ formatter.result({
 formatter.match({
   "arguments": [
     {
-      "val": "Ido",
+      "val": "User",
       "offset": 13
     }
   ],
@@ -189,7 +189,7 @@ formatter.result({
 formatter.match({
   "arguments": [
     {
-      "val": "2 manor close",
+      "val": "1 Test Street",
       "offset": 13
     }
   ],
@@ -202,7 +202,7 @@ formatter.result({
 formatter.match({
   "arguments": [
     {
-      "val": "SE28",
+      "val": "AB1 2CD",
       "offset": 13
     }
   ],
@@ -215,7 +215,7 @@ formatter.result({
 formatter.match({
   "arguments": [
     {
-      "val": "Ade@yahoo.com",
+      "val": "test.user@example.com",
       "offset": 13
     }
   ],
@@ -228,7 +228,7 @@ formatter.result({
 formatter.match({
   "arguments": [
     {
-      "val": "Ade is alright",
+      "val": "Test message",
       "offset": 13
     }
   ],
