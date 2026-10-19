@@ -36,6 +36,11 @@ public final class Config {
         return Integer.parseInt(get("TIMEOUT_SECONDS", "30"));
     }
 
+    /** Off by default: logged-in screens show live business data. Only turn on for local runs. */
+    public static boolean screenshotLoggedIn() {
+        return Boolean.parseBoolean(get("SCREENSHOT_LOGGED_IN", "false"));
+    }
+
     public static String testEmail() {
         return get("WATER_EMAIL", "");
     }

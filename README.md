@@ -37,7 +37,9 @@ mvn test -Dcucumber.filter.tags="@login and not @auth" # no account needed
 mvn test -Dcucumber.filter.tags="@navigation"
 ```
 
-The report is written to `target/cucumber-report.html`, with a screenshot attached to any failed step.
+The report is written to `target/cucumber-report.html`, with a screenshot of the final screen attached to each scenario that runs signed out. The same screenshots are saved as PNGs in `target/screenshots/`, named by result, feature, line and scenario.
+
+Logged-in (`@auth`) scenarios are **not** screenshotted, because their screens show live factory data and this repo is public. They log the URL and open section instead. To capture them on your own machine, run with `SCREENSHOT_LOGGED_IN=true`. Never set this in CI.
 
 ### Other settings
 
@@ -48,13 +50,14 @@ The report is written to `target/cucumber-report.html`, with a screenshot attach
 | `HEADLESS` | `true` on CI, `false` locally | |
 | `WINDOW_SIZE` | `412,915` | Phone-sized by default; try `1366,900` for desktop |
 | `TIMEOUT_SECONDS` | `30` | How long to wait for login and data loading |
+| `SCREENSHOT_LOGGED_IN` | `false` | Local runs only: also screenshot logged-in scenarios |
 
 ## CI
 
 `.github/workflows/ui-tests.yml` runs on every push and pull request, on weekday mornings, and on demand
 (with an optional tag filter). Add `WATER_EMAIL` and `WATER_PASSWORD` under
 **Settings → Secrets and variables → Actions** to include the logged-in scenarios.
-The HTML report is uploaded as a build artifact.
+The HTML report and a `screenshots` folder (one PNG per signed-out scenario) are uploaded as build artifacts and kept for 14 days.
 
 ## Layout
 
